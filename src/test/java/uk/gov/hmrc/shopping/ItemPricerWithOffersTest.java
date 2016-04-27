@@ -44,8 +44,8 @@ public class ItemPricerWithOffersTest {
     public void test2For2OnOrangesWithAllMatchingOffers() {
         itemPricerWithOffers = new ItemPricerWithOffers();
         //3 items, pay for 2 as per 3 for 2 offer
-        BigDecimal expectedPrice = Item.APPLE.getPrice().multiply(BigDecimal.valueOf(2));
-        BigDecimal actualPrice = itemPricerWithOffers.priceItem(Item.APPLE, 3);
+        BigDecimal expectedPrice = Item.ORANGE.getPrice().multiply(BigDecimal.valueOf(2));
+        BigDecimal actualPrice = itemPricerWithOffers.priceItem(Item.ORANGE, 3);
         assertEquals(expectedPrice, actualPrice);
     }
 
@@ -53,8 +53,8 @@ public class ItemPricerWithOffersTest {
     public void test3For2OnOrangesWithOnlyFewMatchingOffers() {
         itemPricerWithOffers = new ItemPricerWithOffers();
         //5 items, but pay for 4 as 3 will qualify for 3 for the price of 2 offers, remaining 2 will be on it's own
-        BigDecimal expectedPrice = Item.APPLE.getPrice().multiply(BigDecimal.valueOf(3));
-        BigDecimal actualPrice = itemPricerWithOffers.priceItem(Item.APPLE, 5);
+        BigDecimal expectedPrice = Item.ORANGE.getPrice().multiply(BigDecimal.valueOf(4));
+        BigDecimal actualPrice = itemPricerWithOffers.priceItem(Item.ORANGE, 5);
         assertEquals(expectedPrice, actualPrice);
     }
 
