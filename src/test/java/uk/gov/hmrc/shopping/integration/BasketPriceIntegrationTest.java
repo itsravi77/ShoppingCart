@@ -1,8 +1,12 @@
-package uk.gov.hmrc.shopping;
+package uk.gov.hmrc.shopping.integration;
 
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import uk.gov.hmrc.shopping.BasketPricer;
+import uk.gov.hmrc.shopping.Item;
+import uk.gov.hmrc.shopping.SimpleBasketPricer;
+import uk.gov.hmrc.shopping.SimpleItemPricer;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
